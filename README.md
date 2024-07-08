@@ -1,3 +1,6 @@
+# Fork changes
+- cfg SDA/SCL display alternate pins
+
 # minigotchi - ミニゴッチ
 
 <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Pwnagotchi-Unofficial/minigotchi"></img>
