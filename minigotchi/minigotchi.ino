@@ -9,7 +9,7 @@ Config config;
 Minigotchi minigotchi;
 
 void setup() {
-    Wire.begin(D3, D4);          // use D3/D4 for SDA/SCL
+    Wire.begin(D3, D4);             // use D3/D4 for SDA/SCL
     Serial.begin(config.baud);
     minigotchi.boot();
 }

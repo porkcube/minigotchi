@@ -90,7 +90,7 @@ void Display::updateDisplay(String face) { Display::updateDisplay(face, ""); }
 void Display::updateDisplay(String face, String text) {
   if (Config::display) {
     if (ssd1306_adafruit_display != nullptr) {
-      ssd1306_adafruit_display->setCursor(0, 0);
+      ssd1306_adafruit_display->setCursor(36, 0);
       delay(5);
       ssd1306_adafruit_display->setTextSize(2);
       delay(5);
