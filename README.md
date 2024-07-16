@@ -1,5 +1,7 @@
 # Fork changes
 - cfg SDA/SCL display alternate pins
+- center faces on display instead of aligned left
+- remove extraneous spaces in some text strings
 
 # minigotchi - ミニゴッチ
 
