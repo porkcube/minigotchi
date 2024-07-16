@@ -140,13 +140,13 @@ bool Deauth::select() {
   if (!Config::parasite) {
     for (int i = 0; i < 5; ++i) {
       Serial.println("(0-o) Scanning for APs.");
-      Display::updateDisplay("(0-o)", "Scanning  for APs.");
+      Display::updateDisplay("(0-o)", "Scanning for APs.");
       delay(Config::shortDelay);
       Serial.println("(o-0) Scanning for APs..");
-      Display::updateDisplay("(o-0)", "Scanning  for APs..");
+      Display::updateDisplay("(o-0)", "Scanning for APs..");
       delay(Config::shortDelay);
       Serial.println("(0-o) Scanning for APs...");
-      Display::updateDisplay("(0-o)", "Scanning  for APs...");
+      Display::updateDisplay("(0-o)", "Scanning for APs...");
       delay(Config::shortDelay);
       Serial.println(" ");
       delay(Config::shortDelay);
