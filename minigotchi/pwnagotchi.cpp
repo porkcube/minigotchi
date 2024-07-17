@@ -70,43 +70,6 @@ void Pwnagotchi::detect() {
     // delay for scanning
     delay(Config::longDelay);
 
-<<<<<<< HEAD
-  // cool animation, skip if parasite mode
-  for (int i = 0; i < 5; ++i) {
-    Serial.println("(0-o) Scanning for Pwnagotchi.");
-    Display::updateDisplay("(0-o)", "Scanning for Pwnagotchi.");
-    delay(Config::shortDelay);
-    Serial.println("(o-0) Scanning for Pwnagotchi..");
-    Display::updateDisplay("(o-0)", "Scanning for Pwnagotchi..");
-    delay(Config::shortDelay);
-    Serial.println("(0-o) Scanning for Pwnagotchi...");
-    Display::updateDisplay("(0-o)", "Scanning for Pwnagotchi...");
-    delay(Config::shortDelay);
-    Serial.println(" ");
-    delay(Config::shortDelay);
-  }
-  // delay for scanning
-  delay(Config::longDelay);
-
-  // check if the pwnagotchiCallback wasn't triggered during scanning
-  if (!pwnagotchiDetected) {
-    // only searches on your current channel and such afaik,
-    // so this only applies for the current searching area
-    Minigotchi::monStop();
-    Pwnagotchi::stopCallback();
-    Serial.println("(;-;) No Pwnagotchi found");
-    Display::updateDisplay("(;-;)", "No Pwnagotchi found.");
-    Serial.println(" ");
-    Parasite::sendPwnagotchiStatus(NO_FRIEND_FOUND);
-  } else if (pwnagotchiDetected) {
-    Minigotchi::monStop();
-    Pwnagotchi::stopCallback();
-  } else {
-    Minigotchi::monStop();
-    Pwnagotchi::stopCallback();
-    Serial.println("(X-X) How did this happen?");
-    Display::updateDisplay("(X-X)", "How did this happen?");
-    Parasite::sendPwnagotchiStatus(FRIEND_SCAN_ERROR);
     // check if the pwnagotchiCallback wasn't triggered during scanning
     if (!pwnagotchiDetected) {
       // only searches on your current channel and such afaik,
