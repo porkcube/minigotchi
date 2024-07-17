@@ -56,13 +56,13 @@ void Pwnagotchi::detect() {
     // cool animation, skip if parasite mode
     for (int i = 0; i < 5; ++i) {
       Serial.println("(0-o) Scanning for Pwnagotchi.");
-      Display::updateDisplay("(0-o)", "Scanning  for Pwnagotchi.");
+      Display::updateDisplay("(0-o)", "Scanning for Pwnagotchi.");
       delay(Config::shortDelay);
       Serial.println("(o-0) Scanning for Pwnagotchi..");
-      Display::updateDisplay("(o-0)", "Scanning  for Pwnagotchi..");
+      Display::updateDisplay("(o-0)", "Scanning for Pwnagotchi..");
       delay(Config::shortDelay);
       Serial.println("(0-o) Scanning for Pwnagotchi...");
-      Display::updateDisplay("(0-o)", "Scanning  for Pwnagotchi...");
+      Display::updateDisplay("(0-o)", "Scanning for Pwnagotchi...");
       delay(Config::shortDelay);
       Serial.println(" ");
       delay(Config::shortDelay);

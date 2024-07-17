@@ -44,7 +44,7 @@ void Minigotchi::boot() {
   Display::startScreen();
   Serial.println(" ");
   Serial.println("(^-^) Hi, I'm Minigotchi, your pwnagotchi's best friend!");
-  Display::updateDisplay("(^-^)", "Hi,       I'm Minigotchi");
+  Display::updateDisplay("(^-^)", "Hi, I'm Minigotchi");
   Serial.println(" ");
   Serial.println(
       "('-') You can edit my configuration parameters in config.cpp!");

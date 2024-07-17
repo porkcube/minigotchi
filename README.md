@@ -2,6 +2,23 @@
 - cfg SDA/SCL display alternate pins
 - center faces on display instead of aligned left
 - remove extraneous spaces in some text strings
+- battery shield + battery for portability
+
+
+<img src="images/IMG_4702.JPG"></img>
+
+## Wemos Battery Shield + 250mAh LiPo battery
+
+Make sure your i2c display has pins ordered VCC/GND/SCL/SDA.  If it's GND/VCC/SCL/SDA **my method will not work**.
+
+Line the pins up with Wemon D1 Mini and Battery Shield ensuring VBUS/GND/TX/RX/3.3V/A0/RST match (the pins labels vary between revisions of D1 and Battery Shield but those shouldn't change).  Use the sockets with the longer pins from the top through the D1 Mini, then through the Battery Shield, and should have a small sliver extending past the Battery Shield for the i2c display.  Trim all the pins down EXCEPT for VBUS/GND/0/2 (D1 mini v4 - D1 mini v3 / Battery Shield v1.2 would be VBUS/GND/D4/D3).  Remove the pins from the i2c display (a solder pump/sucker helps enormously) and solder display in place.  Flash the D1 Mini w/code in Arduino IDE, attach battery JST connector to Battery Shield, pwn on the go!
+
+<img src="images/IMG_4697.JPG"></img>
+<img src="images/IMG_4698.JPG"></img>
+<img src="images/IMG_4699.JPG"></img>
+<img src="images/IMG_4700.JPG"></img>
+
+#########################################
 
 # minigotchi - ミニゴッチ
 
