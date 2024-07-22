@@ -54,7 +54,7 @@ void Minigotchi::boot() {
   delay(Config::shortDelay);
   Serial.println("(>-<) Starting now...");
   Serial.println(" ");
-  Display::updateDisplay("(>-<)", "Starting  now");
+  Display::updateDisplay("(>-<)", "Starting now");
   delay(Config::shortDelay);
   Serial.println("################################################");
   Serial.println("#                BOOTUP PROCESS                #");
