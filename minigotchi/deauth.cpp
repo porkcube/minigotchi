@@ -76,7 +76,7 @@ void Deauth::add(const std::string &bssids) {
     Serial.print("('-') Adding ");
     Serial.print(token.c_str());
     Serial.println(" to the whitelist");
-    Display::updateDisplay("('-')", "Adding " + (String) + " to the whitelist");
+    Display::updateDisplay("('-')", "Adding " + (String(token.c_str())) + " to the whitelist");
     whitelist.push_back(token.c_str());
   }
 }
