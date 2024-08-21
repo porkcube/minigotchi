@@ -9,12 +9,15 @@
 #include "config.h"
 #include "display.h"
 #include "minigotchi.h"
+#include "mood.h"
 #include "parasite.h"
 #include <ArduinoJson.h>
 #include <ESP8266WiFi.h>
 #include <sstream>
 #include <string>
 #include <vector>
+
+class Mood;
 
 class Frame {
 public:
@@ -43,6 +46,7 @@ public:
   static bool sent;
 
 private:
+  static Mood &mood;
 };
 
 #endif // FRAME_H

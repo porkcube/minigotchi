@@ -10,10 +10,15 @@
 #include "deauth.h"
 #include "display.h"
 #include "frame.h"
+#include "mood.h"
 #include "parasite.h"
 #include "pwnagotchi.h"
+#include "webui.h"
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
+
+class Mood;
+class WebUI;
 
 class Minigotchi {
 public:
@@ -32,6 +37,11 @@ public:
   static void epoch();
   static int addEpoch();
   static int currentEpoch;
+
+private:
+  static void waitForInput();
+  static Mood &mood;
+  static WebUI *web;
 };
 
 #endif // MINIGOTCHI_H

@@ -7,6 +7,7 @@
 
 #include "config.h"
 #include "minigotchi.h"
+#include "mood.h"
 #include "parasite.h"
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
@@ -14,6 +15,8 @@
 #include <sstream>
 #include <string>
 #include <vector>
+
+class Mood;
 
 class Deauth {
 public:
@@ -27,6 +30,7 @@ public:
   static int randomIndex;
 
 private:
+  static Mood &mood;
   static bool send(uint8_t *buf, uint16_t len, bool sys_seq);
   static bool broadcast(uint8_t *mac);
   static String printHidden(int network);

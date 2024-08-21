@@ -7,7 +7,10 @@
 
 #include "config.h"
 #include "minigotchi.h"
+#include "mood.h"
 #include <ESP8266WiFi.h>
+
+class Mood;
 
 class Channel {
 public:
@@ -20,6 +23,7 @@ public:
   static int channelList[13]; // 13 channels
 
 private:
+  static Mood &mood;
   static int randomIndex;
   static int numChannels;
   static int currentChannel;
