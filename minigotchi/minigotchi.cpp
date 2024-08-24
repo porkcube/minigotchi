@@ -57,7 +57,7 @@ void Minigotchi::epoch() {
   Serial.println(Minigotchi::currentEpoch);
   Serial.println(" ");
   Display::updateDisplay(mood.getNeutral(),
-                         "Current Epoch: " + Minigotchi::currentEpoch);
+                         " Current Epoch: " + Minigotchi::currentEpoch);
 }
 
 /**
@@ -77,11 +77,15 @@ void Minigotchi::boot() {
                  " Hi, I'm Minigotchi, your pwnagotchi's best friend!");
   Display::updateDisplay(mood.getHappy(), "Hi, I'm Minigotchi");
   Serial.println(" ");
-  Serial.println(mood.getNeutral() +
-                 " You can edit my configuration parameters in config.cpp!");
-  Serial.println(" ");
-  delay(Config::shortDelay);
-  Display::updateDisplay(mood.getNeutral(), "Edit my config.cpp!");
+
+  if (Config::configured = false) {
+    Serial.println(mood.getNeutral() +
+                   " You can edit my configuration parameters in config.cpp!");
+    Serial.println(" ");
+    delay(Config::shortDelay);
+    Display::updateDisplay(mood.getNeutral(), "Edit my config.cpp!");
+  }
+
   delay(Config::shortDelay);
   Serial.println(mood.getIntense() + " Starting now...");
   Serial.println(" ");
