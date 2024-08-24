@@ -57,7 +57,7 @@ void Minigotchi::epoch() {
   Serial.println(Minigotchi::currentEpoch);
   Serial.println(" ");
   Display::updateDisplay(mood.getNeutral(),
-                         " Current Epoch: " + Minigotchi::currentEpoch);
+                         "Current Epoch: " + String(Minigotchi::currentEpoch));
 }
 
 /**
