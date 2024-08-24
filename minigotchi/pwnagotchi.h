@@ -7,6 +7,7 @@
 
 #include "frame.h"
 #include "minigotchi.h"
+#include "mood.h"
 #include "parasite.h"
 #include <Arduino.h>
 #include <ArduinoJson.h>
@@ -19,6 +20,8 @@ extern "C" {
 #include "structs.h"
 }
 
+class Mood;
+
 class Pwnagotchi {
 public:
   static void detect();
@@ -27,6 +30,7 @@ public:
   static void stopCallback();
 
 private:
+  static Mood &mood;
   static String findCopy(const String &buf);
   static String extractMAC(const unsigned char *buff);
   static void getMAC(char *addr, const unsigned char *buff, int offset);
