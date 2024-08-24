@@ -113,7 +113,7 @@ Mood &Mood::getInstance() { return *instance; }
  * Returns the current mood and writes it to a variable
  * @param face Face to get mood off of
  */
-String Mood::getFull(String face) { Mood::getFace(Mood::getMood(face)); }
+String Mood::getFull(String face) { return Mood::getFace(Mood::getMood(face)); }
 
 /**
  * Returns current mood
