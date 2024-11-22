@@ -74,8 +74,11 @@ void Minigotchi::boot() {
   Display::startScreen();
   Serial.println(" ");
   Serial.println(mood.getHappy() +
-                 " Hi, I'm Minigotchi, your pwnagotchi's best friend!");
-  Display::updateDisplay(mood.getHappy(), "Hi, I'm Minigotchi");
+                 " Hi, I'm " + (String)Config::name.c_str() + ", your pwnagotchi's best friend!");
+  // Serial.println(mood.getHappy() +
+  //                " Hi, I'm Minigotchi, your pwnagotchi's best friend!");
+  Display::updateDisplay(mood.getHappy(), "Hi, I'm " + (String)Config::name.c_str() + ", your pwnagotchi's best friend!");
+  // Display::updateDisplay(mood.getHappy(), "Hi, I'm Minigotchi");
   Serial.println(" ");
 
   if (Config::configured = false) {
